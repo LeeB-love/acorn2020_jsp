@@ -8,19 +8,15 @@
 <title>/sub/fortune.jsp</title>
 </head>
 <body>
-	<% 
-		String[] fortune = {
-				"좋을 때도 있는 것처럼 나쁠 때도 있습니다.",
-				"불확실한 일은 추진하지 마세요!",
-				"어려운 사람을 도우면 좋은 일이 일어날 것입니다.",
-				"욕심을 부리다가 오히려 손해를 볼 수 있으니 조심하세요!",
-				"노력한 만큼 좋은 성적을 거둘거에요~"
-		};
-		
-		Random ran = new Random();
-		int ranF = ran.nextInt(5);
-		String f = fortune[ranF];
-	%>
-	<p>오늘의 운세 : <%=f %></p>
+<%
+	//sample  운세 5개를 미리 배열에 준비하기
+	String[] fortunes= {"동쪽으로 가면 귀인을 만나요",
+				"로또가 당첨 될꺼에요","세엣","네엣","다섯"};
+	//Random 객체
+	Random ran=new Random();
+	// 0~4  사이의 렌덤한 정수 얻어내기 
+	int ranNum=ran.nextInt(5);
+%>
+<p>오늘의 운세 : <%=fortunes[ranNum] %></p>
 </body>
 </html>
