@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hello.html</title>
+<link rel="stylesheet" href="/Web02_Servlet/css/bootstrap.css" />
+</head>
+<body>
+	<div class = "container">
+		<h1>인덱스 페이지입니다.</h1>
+		<ul>
+			<li><a href="hello">hello~</a></li>
+			<li><a href="ready">ready?</a></li>
+			<li><a href="time">현재시간 보기</a></li>
+			<li><a href="time.jsp">현재시간 보기(jsp)</a></li>
+			<li><a href="sub/fortune">오늘의 운세보기</a></li>
+			<li><a href="sub/fortune.jsp">오늘의 운세보기(jsp)</a></li> <!-- sub 폴더 안에 fortune.jsp를 만들어야함 -->
+			<li><a href="todo/list">할일 목록 보기</a></li>
+			<li><a href="todo/list.jsp">할일 목록 보기(jsp)</a></li>
+			<li><a href="member/list">회원 목록 보기</a></li>
+			<li><a href="member/list.jsp">회원 목록 보기(jsp)</a></li>
+			<li><a href="users/signup_form.jsp">회원가입 하러 가기</a></li>
+		</ul>
+		<form action="send" method="post">
+			<label for="msg">서버에 할 말 입력</label>
+			<input type="text" name="msg" id="msg"/>  <!-- server는 name으로 구분함 -->
+			<button type="submit" class="btn btn-primary">전송</button>
+		</form>
+		
+		<h3>가상의 로그인 폼입니다.</h3>
+		<form action="/Web02_Servlet/users/Login" method="post">
+			<div class="form-group">
+				<label for="id">아이디</label>
+				<input class="form=control" type="text" name="id" id="id"/>
+			</div>
+			<div class="form-group">
+				<label for="pwd">비밀번호</label>
+				<input class="form=control" type="text" name="pwd" id="pwd"/>
+			</div>
+			<button class="btn btn-primary" type="submit">로그인</button>
+			<button class="btn btn-primary" type="reset">취소</button>
+		</form>
+		
+		<h3>가상의 로그인 폼입니다.</h3>
+		<form action="/Web02_Servlet/users/login.jsp" method="post">
+			<div class="form-group">
+				<label for="id">아이디</label>
+				<input class="form=control" type="text" name="id" id="id"/>
+			</div>
+			<div class="form-group">
+				<label for="pwd">비밀번호</label>
+				<input class="form=control" type="text" name="pwd" id="pwd"/>
+			</div>
+			<button class="btn btn-primary" type="submit">로그인</button>
+			<button class="btn btn-primary" type="reset">취소</button>
+		</form>
+	</div>
+</body>
+</html>
+<!-- 
+클라이언트는 서버에 요청(request)하고 서버는 클라이언트에게 응답(response) 한다.
+어디에 어떤 경로를 요청할지는 주소창에 나타난다. 
+ -->
